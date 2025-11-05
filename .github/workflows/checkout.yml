@@ -1,0 +1,14 @@
+name:  Checkout Example
+on:
+  workflow_dispatch: 
+jobs:
+  checkout-example:
+    runs-on: ubuntu-latest 
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Verify files and directories
+        run: |
+          echo "Listing files in the repository:"
+          ls -alhR
